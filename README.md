@@ -1,7 +1,7 @@
 # ApiTurismo
 Api Turismo Trabajo de Clase
 # Recursos Utilizados
-#### Hemos utilizado una base de datos en las que representamos una tbala de hotel una de restaurante una de cliente y una de propietario
+#### Hemos utilizado una base de datos en las que representamos una tabla de hotel una de restaurante una de cliente y una de propietario
 #### siendo asi la estructura de nuestra base de datos en MySQL :
 
 create table propietario(
@@ -53,23 +53,23 @@ foreign key (restaurante_id) references restaurante (id)
 #### Hay que tener en ceunta que estas tablas las hemos rellenado de datos ficticios en los que mas adelante veremos como obtenemos respuesta de estos recursos
 # Endpoints
 #### En nuestro controlador de hotel tenemos los siguientes endpoints:
-  @GetMapping("/{correo}")
-  @GetMapping("/{correo}/{id}")
-  @GetMapping("/{correo}/byOwner/{idPropietario}")
-  @GetMapping("/{correo}/byAño/{año}")
-  @GetMapping("/{correo}/byDireccion/{direccion}")
-  @PostMapping("/{correo}/saveHotel")   
-  @PutMapping("/{correo}/{id}/updateHotel/name")
-  @DeleteMapping("/{correo}/{id}/deleteHotel")
+  @GetMapping("")
+  @GetMapping("/{id}")
+  @GetMapping("/{idPropietario}")
+  @GetMapping("{año}")
+  @GetMapping("/{direccion}")
+  @PostMapping("/saveHotel")   
+  @PutMapping("/{id}")
+  @DeleteMapping("/{id}")
 #### En nuestro controlador de restaurante tenemos los siguientes endpoints:
-  @GetMapping("/{correo}")
-  @GetMapping("/{correo}/restauranteByPropietarioId/{idPropietarioR}")
-  @GetMapping("/{correo}/restauranteById/{id}")
-  @GetMapping("{correo}/restaurantesByAño/{año}")
-  @GetMapping("{correo}/restauranteByDireccion/{direccion}")
-  @PostMapping("/{correo}/saveRestaurante")
-  @PutMapping("/{correo}/{id}/updateRestauranteByName")
-  @DeleteMapping("/{correo}/{id}/deleteRestauranteById")
+  @GetMapping("")
+  @GetMapping("/{idPropietarioR}")
+  @GetMapping("/{id}")
+  @GetMapping("/{año}")
+  @GetMapping("/{direccion}")
+  @PostMapping("/saveRestaurante")
+  @PutMapping("/{id}")
+  @DeleteMapping("/{id}")
 
   # Algunos ejemplos de Respuestas:
   ##### POST http://localhost:8080/restaurantes/john.doe@example.com/saveRestaurante?token=ARXCVFGERAQ
@@ -96,7 +96,7 @@ Response file saved.
 > 2024-02-10T191350.200.json
 
 Response code: 200; Time: 39ms (39 ms); Content length: 159 bytes (159 B)
-##### DELETE http://localhost:8080/restaurantes/eva.williams@example.com/22/deleteRestauranteById?token=ARXCVFGERAQ
+##### DELETE http://localhost:8080/restaurantes/22?token=tokenPropietario1
 
 HTTP/1.1 200 
 Content-Type: application/json
@@ -121,7 +121,7 @@ Response file saved.
 
 Response code: 200; Time: 268ms (268 ms); Content length: 160 bytes (160 B)
 
-##### PUT http://localhost:8080/hoteles/john.doe@example.com/18/updateHotel/name?token=ARXCVFGERAQ
+##### PUT http://localhost:8080/hoteles/18?token=tokenPropietario1
 
 HTTP/1.1 200 
 Content-Type: application/json
@@ -152,7 +152,7 @@ Response file saved.
 
 Response code: 200; Time: 304ms (304 ms); Content length: 266 bytes (266 B)
 
-##### GET http://localhost:8080/restaurantes/miguel.sanchez@example.com/restauranteById/5?token=tokenMiguel
+##### GET http://localhost:8080/restaurantes/5?token=tokenMiguel
 
 HTTP/1.1 200 
 Content-Type: application/json
@@ -181,7 +181,7 @@ Response file saved.
 
 Response code: 200; Time: 244ms (244 ms); Content length: 285 bytes (285 B)
 
-##### GET http://localhost:8080/hoteles/miguel.sanchez@example.com/byOwner/2?token=tokenMiguel
+##### GET http://localhost:8080/hoteles/2?token=tokenMiguel
 HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
