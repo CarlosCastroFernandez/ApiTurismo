@@ -72,7 +72,7 @@ foreign key (restaurante_id) references restaurante (id)
   @DeleteMapping("/{id}")
 
   # Algunos ejemplos de Respuestas:
-  ##### POST http://localhost:8080/restaurantes/john.doe@example.com/saveRestaurante?token=ARXCVFGERAQ
+  ##### POST http://localhost:8080/restaurantes/saveRestaurante?token=tokenPropietario1
 
 HTTP/1.1 200 
 Content-Type: application/json
@@ -89,7 +89,12 @@ Connection: keep-alive
   "descripcion": null,
   "valoracion": null,
   "anioFundado": null,
-  "propietarioRId": null,
+  "propietarioRId": []
+  {
+  "id": 1
+  "nombre":Jon
+  "apellido":Doe
+  },
   "clientes": null
 }
 Response file saved.
