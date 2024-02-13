@@ -96,7 +96,7 @@ Response file saved.
 > 2024-02-10T191350.200.json
 
 Response code: 200; Time: 39ms (39 ms); Content length: 159 bytes (159 B)
-##### DELETE http://localhost:8080/restaurantes/eva.williams@example.com/22/deleteRestauranteById?token=ARXCVFGERAQ
+##### DELETE http://localhost:8080/restaurantes/22?token=tokenPropietario1
 
 HTTP/1.1 200 
 Content-Type: application/json
@@ -121,7 +121,7 @@ Response file saved.
 
 Response code: 200; Time: 268ms (268 ms); Content length: 160 bytes (160 B)
 
-##### PUT http://localhost:8080/hoteles/john.doe@example.com/18/updateHotel/name?token=ARXCVFGERAQ
+##### PUT http://localhost:8080/hoteles/18?token=tokenPropietario1
 
 HTTP/1.1 200 
 Content-Type: application/json
@@ -152,7 +152,7 @@ Response file saved.
 
 Response code: 200; Time: 304ms (304 ms); Content length: 266 bytes (266 B)
 
-##### GET http://localhost:8080/restaurantes/miguel.sanchez@example.com/restauranteById/5?token=tokenMiguel
+##### GET http://localhost:8080/restaurantes/5?token=tokenMiguel
 
 HTTP/1.1 200 
 Content-Type: application/json
@@ -181,7 +181,7 @@ Response file saved.
 
 Response code: 200; Time: 244ms (244 ms); Content length: 285 bytes (285 B)
 
-##### GET http://localhost:8080/hoteles/miguel.sanchez@example.com/byOwner/2?token=tokenMiguel
+##### GET http://localhost:8080/hoteles/2?token=tokenMiguel
 HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
