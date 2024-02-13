@@ -1,7 +1,7 @@
 # ApiTurismo
 Api Turismo Trabajo de Clase
 # Recursos Utilizados
-#### Hemos utilizado una base de datos en las que representamos una tbala de hotel una de restaurante una de cliente y una de propietario
+#### Hemos utilizado una base de datos en las que representamos una tabla de hotel una de restaurante una de cliente y una de propietario
 #### siendo asi la estructura de nuestra base de datos en MySQL :
 
 create table propietario(
